@@ -1,0 +1,164 @@
+/* Réinitialisation des styles par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles de base */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 2rem;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.calendar-container,
+.reservation-form,
+.reservation-card {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333; /* Ajout de couleur */
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555; /* Ajout de couleur */
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Styles pour le calendrier */
+.calendar-container {
+  flex-basis: calc(66.666% - 20px);
+}
+
+#calendar {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+#calendar h2 {
+  text-align: center;
+  color: #333; /* Ajout de couleur */
+}
+
+.calendrier ul.semaines {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.calendrier ul.semaines li {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.calendrier ul.jours {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  list-style: none;
+  padding: 0;
+}
+
+.calendrier ul.jours li {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.calendrier ul.jours li.active {
+  background-color: #333;
+  color: white;
+}
+
+.calendrier ul.jours li.inactive {
+  color: #ccc;
+}
+
+/* Styles pour la carte de réservation */
+.reservation-card {
+  flex-basis: calc(33.333% - 20px);
+}
+
+.reservation-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333; /* Ajout de couleur */
+}
+
+.reservation-card p {
+  font-size: 16px;
+}
+
+/* Styles pour les dates réservées */
+.reserved {
+  background-color: red;
+  color: white;
+}
+
+/* Media queries pour la mise en page mobile */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .calendar-container,
+  .reservation-form,
+  .reservation-card {
+    flex-basis: 100%;
+  }
+}
